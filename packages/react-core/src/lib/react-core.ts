@@ -1,7 +1,7 @@
 import { core } from '@mmnxtest/core'
 
 export function reactCore(): string {
-  console.log(core(), 'bla bla')
+  console.log(core(), 'bla bla!')
 
   return 'react-core!';
 }
