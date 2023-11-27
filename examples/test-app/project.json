@@ -1,5 +1,5 @@
 {
-  "name": "shell",
+  "name": "test-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "examples/test-app/src",
   "projectType": "application",
@@ -52,16 +52,16 @@
       "executor": "@nx/react:module-federation-dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "shell:build",
+        "buildTarget": "test-app:build",
         "hmr": true,
         "port": 4200
       },
       "configurations": {
         "development": {
-          "buildTarget": "shell:build:development"
+          "buildTarget": "test-app:build:development"
         },
         "production": {
-          "buildTarget": "shell:build:production",
+          "buildTarget": "test-app:build:production",
           "hmr": false
         }
       }
@@ -77,16 +77,16 @@
       "executor": "@nx/web:file-server",
       "defaultConfiguration": "production",
       "options": {
-        "buildTarget": "shell:build",
+        "buildTarget": "test-app:build",
         "watch": false,
         "port": 4200
       },
       "configurations": {
         "development": {
-          "buildTarget": "shell:build:development"
+          "buildTarget": "test-app:build:development"
         },
         "production": {
-          "buildTarget": "shell:build:production"
+          "buildTarget": "test-app:build:production"
         }
       }
     },

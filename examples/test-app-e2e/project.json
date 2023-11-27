@@ -1,5 +1,5 @@
 {
-  "name": "shell-e2e",
+  "name": "test-app-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "examples/test-app-e2e/src",
@@ -9,15 +9,15 @@
       "options": {
         "cypressConfig": "examples/test-app-e2e/cypress.config.ts",
         "testingType": "e2e",
-        "devServerTarget": "shell:serve",
+        "devServerTarget": "test-app:serve",
         "baseUrl": "http://localhost:4200"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "shell:serve:production"
+          "devServerTarget": "test-app:serve:production"
         },
         "ci": {
-          "devServerTarget": "shell:serve-static"
+          "devServerTarget": "test-app:serve-static"
         }
       }
     },
@@ -29,6 +29,6 @@
       }
     }
   },
-  "implicitDependencies": ["shell"],
+  "implicitDependencies": ["test-app"],
   "tags": []
 }
