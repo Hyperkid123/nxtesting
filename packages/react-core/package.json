@@ -7,7 +7,9 @@
   "type": "commonjs",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
-  "dependencies": {},
+  "dependencies": {
+    "@mmtest/core": "^0.0.1"
+  },
   "publishConfig": {
     "access": "public"
   }
