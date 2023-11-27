@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: npx nx affected --base=last-release --target=version
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Tag last-release
         shell: bash
         run: |
