@@ -27,10 +27,10 @@ jobs:
         shell: bash
         run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
       - name: Version
-        shell: bash
-        run: npx nx affected --base=last-release --parallel=1 --target=version --postTargets=npm,github
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx nx affected --base=last-release --parallel=1 --target=version --postTargets=npm,github
       - name: Tag last-release
         shell: bash
         run: |
