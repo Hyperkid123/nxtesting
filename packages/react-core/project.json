@@ -1,5 +1,5 @@
 {
-  "name": "@mmtest/react-core",
+  "name": "@ mmnxtest/react-core",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/react-core/src",
   "projectType": "library",
@@ -15,7 +15,7 @@
       }
     },
     "publish": {
-      "command": "node tools/scripts/publish.mjs @mmtest/react-core {args.ver} {args.tag}",
+      "command": "node tools/scripts/publish.mjs @ mmnxtest/react-core {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
     "lint": {
@@ -44,7 +44,7 @@
     "release": {
       "executor": "nx-release:build-update-publish",
       "options": {
-        "libName": "@mmtest/react-core"
+        "libName": "@ mmnxtest/react-core"
       }
     }
   },

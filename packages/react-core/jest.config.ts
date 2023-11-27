@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: '@mmtest/react-core',
+  displayName: '@ mmnxtest/react-core',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
