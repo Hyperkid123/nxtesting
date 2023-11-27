@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.4](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.3...@mmnxtest/core-1.0.4) (2023-11-27)
+
+
+### Bug Fixes
+
+* add push options for CI deployment ([56a1815](https://github.com/Hyperkid123/nxtesting/commit/56a18155d9dac9040feb2cb53b67fcb014781904))
+
 ## 0.1.0 (2023-11-27)
 
 
