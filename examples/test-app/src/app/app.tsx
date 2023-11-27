@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { reactCore } from '@nxtesting/react-core';
+import { reactCore } from '@mmtest/react-core';
 export function App() {
   return (
     <React.Suspense fallback={null}>

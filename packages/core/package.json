@@ -1,11 +1,11 @@
 {
-  "name": "@nxtesting/core",
+  "name": "@mmtest/core",
   "version": "0.0.1",
   "devDependencies": {
     "tslib": "^2.3.0"
   },
   "dependencies": {
-    "@nxtesting/core": "^0.0.1"
+    "@mmtest/core": "^0.0.1"
   },
   "type": "commonjs",
   "main": "./src/index.js",

@@ -1,4 +1,4 @@
-import { core } from '@nxtesting/core'
+import { core } from '@mmtest/core'
 
 export function reactCore(): string {
   console.log(core())
