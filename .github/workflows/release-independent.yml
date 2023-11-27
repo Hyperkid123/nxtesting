@@ -26,16 +26,10 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         shell: bash
         run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
-      - name: Check GH token test
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        if: ${{ env.GH_TOKEN == '' }}
-        run: "echo missing GH token"
       - name: Version
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx nx affected --base=last-release --parallel=1 --target=version --postTargets=npm,github
       - name: Tag last-release
         shell: bash
