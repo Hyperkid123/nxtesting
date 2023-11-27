@@ -44,9 +44,22 @@
     "release": {
       "executor": "nx-release:build-update-publish",
       "options": {
-        "libName": "@mmnxtest/react-core"
+        "preset": "conventionalcommits",
+        "postTargets": ["npm", "github"]
       }
-    }
-  },
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "{tag}",
+        "notes": "{notes}"
+      }
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
   "tags": []
 }
