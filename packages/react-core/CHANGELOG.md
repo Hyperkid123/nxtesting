@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.3](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.2...@mmnxtest/react-core-1.0.3) (2023-11-27)
+
+
+### Bug Fixes
+
+* testing independent release ([3a84adf](https://github.com/Hyperkid123/nxtesting/commit/3a84adf7891c5949623eed4433bd69b322d014b7))
+
 ## 0.1.0 (2023-11-27)
 
 
