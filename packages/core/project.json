@@ -1,5 +1,5 @@
 {
-  "name": "@ mmnxtest/core",
+  "name": "@mmnxtest/core",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/core/src",
   "projectType": "library",
@@ -15,7 +15,7 @@
       }
     },
     "publish": {
-      "command": "node tools/scripts/publish.mjs @ mmnxtest/core {args.ver} {args.tag}",
+      "command": "node tools/scripts/publish.mjs @mmnxtest/core {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
     "lint": {
@@ -44,7 +44,7 @@
     "release": {
       "executor": "nx-release:build-update-publish",
       "options": {
-        "libName": "@ mmnxtest/core"
+        "libName": "@mmnxtest/core"
       }
     }
   },

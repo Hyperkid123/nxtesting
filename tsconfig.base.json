@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ mmnxtest/core": ["packages/core/src/index.ts"],
-      "@ mmnxtest/react-core": ["packages/react-core/src/index.ts"]
+      "@mmnxtest/core": ["packages/core/src/index.ts"],
+      "@mmnxtest/react-core": ["packages/react-core/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
