@@ -29,12 +29,3 @@ jobs:
         run: |
           git tag -f last-release
           git push origin last-release --force
-      - name: Push changes
-        uses: ad-m/github-push-action@master 
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          branch: ${{ github.ref }}
-          force: true
-          tags: true
