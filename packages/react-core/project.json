@@ -1,0 +1,46 @@
+{
+  "name": "@nxtesting/react-core",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/react-core/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/react-core",
+        "main": "packages/react-core/src/index.ts",
+        "tsConfig": "packages/react-core/tsconfig.lib.json",
+        "assets": ["packages/react-core/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs @nxtesting/react-core {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/react-core/**/*.ts",
+          "packages/react-core/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/react-core/jest.config.ts"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventionalcommits"
+      }
+    }
+  },
+  "tags": []
+}
