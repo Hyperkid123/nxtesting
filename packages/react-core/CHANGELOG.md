@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.15](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.14...@mmnxtest/react-core-1.0.15) (2023-11-28)
+
+
+### Bug Fixes
+
+* enable version bump executor at react-core ([dcfdbcf](https://github.com/Hyperkid123/nxtesting/commit/dcfdbcf7929d0afeddea4f398d7061ad79a4134a))
+
 ## [1.0.14](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.13...@mmnxtest/react-core-1.0.14) (2023-11-28)
 
 
