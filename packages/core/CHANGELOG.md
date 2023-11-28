@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.5](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.4...@mmnxtest/core-1.0.5) (2023-11-28)
+
+
+### Bug Fixes
+
+* enable dependency tracking ([f101c4a](https://github.com/Hyperkid123/nxtesting/commit/f101c4acc4db78180f2c79f790c6aa01a4bdf7c0))
+
 ## [1.0.4](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.3...@mmnxtest/core-1.0.4) (2023-11-27)
 
 
