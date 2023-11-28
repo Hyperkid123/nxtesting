@@ -2,7 +2,7 @@ import { ExecutorContext, createProjectGraphAsync } from '@nx/devkit';
 import { join } from 'path'
 import { readFileSync, writeFileSync } from 'fs'
 import * as semver from 'semver';
-
+import { execSync } from 'child_process';
 export interface EchoExecutorOptions {
   textToEcho: string;
 }
@@ -27,6 +27,13 @@ type DependencyMetadata = {
   type: string
   path: string
   version: string
+}
+
+function commitToPrevious() {
+  const addCommand = `git add .`;
+  const commitToPreviousCommand = `git commit --amend --no-edit`;
+  execSync(addCommand);
+  execSync(commitToPreviousCommand);
 }
 
 export default async function syncDependencies(
@@ -67,13 +74,11 @@ export default async function syncDependencies(
       }
     })
     writeFileSync(projectPackageJsonPath, JSON.stringify(projectPackageJson, null, 2).concat('\n'), { encoding: 'utf-8' })
+    commitToPrevious()
     return { success: true }
     
   } catch (error) {
     console.error(error)
     return { success: false };
-    
-  }
-
- 
+  } 
 }
