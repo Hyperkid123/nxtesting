@@ -36,7 +36,6 @@
       }
     },
     "version": {
-      "dependsOn": ["^version"],
       "executor": "@jscutlery/semver:version",
       "options": {
         "trackDeps": true,
