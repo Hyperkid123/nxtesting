@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.8](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.7...@mmnxtest/react-core-1.0.8) (2023-11-28)
+
+
+### Bug Fixes
+
+* **react-core:** add missing push project option ([445e950](https://github.com/Hyperkid123/nxtesting/commit/445e9508d23398d084bbd9d2b24188d0343e4baa))
+
 ## [1.0.3](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.2...@mmnxtest/react-core-1.0.3) (2023-11-27)
 
 
