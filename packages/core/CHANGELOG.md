@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.7](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.6...@mmnxtest/core-1.0.7) (2023-11-28)
+
+
+### Bug Fixes
+
+* add enable trackDeps option ([32dfe24](https://github.com/Hyperkid123/nxtesting/commit/32dfe24a94f4511a96f369ea4becae0688371ecf))
+
 ## [1.0.6](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.5...@mmnxtest/core-1.0.6) (2023-11-28)
 
 
