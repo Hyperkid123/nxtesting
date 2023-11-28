@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "sync-dependencies": {
+      "implementation": "./src/executors/sync-dependencies/executor",
+      "schema": "./src/executors/sync-dependencies/schema.json",
+      "description": "sync-dependencies executor"
+    }
+  }
+}

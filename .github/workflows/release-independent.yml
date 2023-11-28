@@ -30,7 +30,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx nx affected --base=last-release --parallel=1 --target=version --postTargets=npm,github --trackDeps
+        run: npx nx affected --base=last-release --parallel=1 --target=version --postTargets=syncDependencies,npm,github --trackDeps
       - name: Tag last-release
         shell: bash
         run: |
