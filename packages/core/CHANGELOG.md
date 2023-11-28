@@ -2,6 +2,19 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.3](https://github.com/Hyperkid123/nxtesting/compare/v1.0.2...v1.0.3) (2023-11-28)
+
+
+### Bug Fixes
+
+* add build post target ([3d88659](https://github.com/Hyperkid123/nxtesting/commit/3d886599e905ec21bdeca96f67f050dc43087435))
+* add enable trackDeps option ([32dfe24](https://github.com/Hyperkid123/nxtesting/commit/32dfe24a94f4511a96f369ea4becae0688371ecf))
+* add postTarget cli option ([53e405f](https://github.com/Hyperkid123/nxtesting/commit/53e405f13c9ff270fb9bd1ebd2d313501d0dd453))
+* add push options for CI deployment ([56a1815](https://github.com/Hyperkid123/nxtesting/commit/56a18155d9dac9040feb2cb53b67fcb014781904))
+* **core:** update core lib ([dd8594a](https://github.com/Hyperkid123/nxtesting/commit/dd8594ace0f3ae3f7fb5ee36bbc445f311daa19a))
+* enable dependency tracking ([15ce7bc](https://github.com/Hyperkid123/nxtesting/commit/15ce7bc5bed789e3a72515bc222b5d678e3c66a6))
+* enable dependency tracking ([f101c4a](https://github.com/Hyperkid123/nxtesting/commit/f101c4acc4db78180f2c79f790c6aa01a4bdf7c0))
+
 ## [1.0.7](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.6...@mmnxtest/core-1.0.7) (2023-11-28)
 
 
