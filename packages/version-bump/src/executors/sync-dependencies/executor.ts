@@ -33,7 +33,7 @@ type DependencyMetadata = {
 
 function commitToPrevious(baseBranch: string, remote: string) {
   const addCommand = `git add .`;
-  const commitToPreviousCommand = `git commit --no-edit -m "chore: sync dependencies"`;
+  const commitToPreviousCommand = `git commit --no-edit -m "[skip ci] sync dependencies"`;
   const pushCommand = `git push ${remote} ${baseBranch}`;
   execSync(addCommand);
   execSync(commitToPreviousCommand);
