@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.9](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.8...@mmnxtest/core-1.0.9) (2023-11-28)
+
+
+### Bug Fixes
+
+* **core:** patch ([084540d](https://github.com/Hyperkid123/nxtesting/commit/084540d3ea4ef150a9622864be24af0b0c6fdef1))
+* update ([fc8552b](https://github.com/Hyperkid123/nxtesting/commit/fc8552b7fb3bb9437521b5d46dee22e0a13c6113))
+
 ## [1.0.6](https://github.com/Hyperkid123/nxtesting/compare/v1.0.5...v1.0.6) (2023-11-28)
 
 ## [1.0.5](https://github.com/Hyperkid123/nxtesting/compare/v1.0.4...v1.0.5) (2023-11-28)
