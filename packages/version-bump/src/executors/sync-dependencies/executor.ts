@@ -30,11 +30,6 @@ type DependencyMetadata = {
   version: string
 }
 
-function pullRemote(baseBranch: string, remote: string) {
-  const pullCommand = `git pull ${remote} ${baseBranch}`;
-  execSync(pullCommand);
-}
-
 
 function commitToPrevious(baseBranch: string, remote: string) {
   const addCommand = `git add .`;
@@ -53,7 +48,6 @@ export default async function syncDependencies(
   const baseBranch = options.baseBranch || 'main';
   const remote = options.remote || 'origin';
   try {
-    // pullRemote(baseBranch, remote)
     const projectName = context.projectName;
     const currentProjectRoot = context.projectsConfigurations?.projects?.[projectName]?.root
     const root = context.root;
