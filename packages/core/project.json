@@ -39,8 +39,7 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "push": true,
-        "preset": "conventionalcommits",
-        "postTargets": ["npm", "github"]
+        "preset": "conventionalcommits"
       }
     },
     "github": {
