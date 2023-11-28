@@ -3,8 +3,9 @@ import { join } from 'path'
 import { readFileSync, writeFileSync } from 'fs'
 import * as semver from 'semver';
 import { execSync } from 'child_process';
-export interface EchoExecutorOptions {
-  textToEcho: string;
+export interface SyncDependenciesExecutorOptions {
+  baseBranch?: string;
+  remote?: string;
 }
 
 const RANGE_REGEX = /^\D/
@@ -29,24 +30,29 @@ type DependencyMetadata = {
   version: string
 }
 
-function commitToPrevious() {
+function commitToPrevious(baseBranch: string, remote: string) {
   const addCommand = `git add .`;
-  const commitToPreviousCommand = `git commit --amend --no-edit`;
+  const commitToPreviousCommand = `git commit --amend --no-edit -m "chore: sync dependencies"`;
+  const pushCommand = `git push ${remote} ${baseBranch}`;
   execSync(addCommand);
   execSync(commitToPreviousCommand);
+  execSync(pushCommand);
 }
 
 export default async function syncDependencies(
-  options: EchoExecutorOptions,
+  options: SyncDependenciesExecutorOptions,
   context: ExecutorContext
 ): Promise<{ success: boolean }> {
-  console.info(`Executing "sync dependencies"...`);
+  console.info(`Executing "sync dependencies"...`, options);
+  const baseBranch = options.baseBranch || 'main';
+  const remote = options.remote || 'origin';
   try {
     const projectName = context.projectName;
     const currentProjectRoot = context.projectsConfigurations?.projects?.[projectName]?.root
     const root = context.root;
     const dependencyGraph = await createProjectGraphAsync()
     const projectPackageJsonPath = join(root, currentProjectRoot, 'package.json')
+    const initialProjectPackageJson = JSON.parse(readFileSync(projectPackageJsonPath).toString())
     const projectPackageJson = JSON.parse(readFileSync(projectPackageJsonPath).toString())
     const projectDependencies = dependencyGraph.dependencies[projectName]?.filter(d => !d.target.startsWith('npm:'))
     const dependenciesMetadata = projectDependencies.reduce<DependencyMetadata[]>((acc, d) => {
@@ -73,8 +79,11 @@ export default async function syncDependencies(
         
       }
     })
-    writeFileSync(projectPackageJsonPath, JSON.stringify(projectPackageJson, null, 2).concat('\n'), { encoding: 'utf-8' })
-    commitToPrevious()
+
+    if(JSON.stringify(initialProjectPackageJson) !== JSON.stringify(projectPackageJson)) {
+      writeFileSync(projectPackageJsonPath, JSON.stringify(projectPackageJson, null, 2).concat('\n'), { encoding: 'utf-8' })
+      commitToPrevious(baseBranch, remote)
+    }
     return { success: true }
     
   } catch (error) {
