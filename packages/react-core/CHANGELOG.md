@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.16](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.15...@mmnxtest/react-core-1.0.16) (2023-11-28)
+
+
+### Bug Fixes
+
+* add executor commit command ([af36e3a](https://github.com/Hyperkid123/nxtesting/commit/af36e3a20387c121467815058d8ef3aa3339826d))
+
 ## [1.0.15](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.14...@mmnxtest/react-core-1.0.15) (2023-11-28)
 
 
