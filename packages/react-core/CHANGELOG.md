@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.18](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.17...@mmnxtest/react-core-1.0.18) (2023-11-28)
+
+
+### Bug Fixes
+
+* sync git history before pushing chore commit ([c825c04](https://github.com/Hyperkid123/nxtesting/commit/c825c04a3ab9684aca8c60b8783e0db681fa45b5))
+
 ## [1.0.17](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.16...@mmnxtest/react-core-1.0.17) (2023-11-28)
 
 
