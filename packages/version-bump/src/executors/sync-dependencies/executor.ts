@@ -38,7 +38,7 @@ function pullRemote(baseBranch: string, remote: string) {
 
 function commitToPrevious(baseBranch: string, remote: string) {
   const addCommand = `git add .`;
-  const commitToPreviousCommand = `git commit --amend --no-edit -m "chore: sync dependencies"`;
+  const commitToPreviousCommand = `git commit --no-edit -m "chore: sync dependencies"`;
   const pushCommand = `git push ${remote} ${baseBranch}`;
   execSync(addCommand);
   execSync(commitToPreviousCommand);
@@ -53,7 +53,7 @@ export default async function syncDependencies(
   const baseBranch = options.baseBranch || 'main';
   const remote = options.remote || 'origin';
   try {
-    pullRemote(baseBranch, remote)
+    // pullRemote(baseBranch, remote)
     const projectName = context.projectName;
     const currentProjectRoot = context.projectsConfigurations?.projects?.[projectName]?.root
     const root = context.root;
