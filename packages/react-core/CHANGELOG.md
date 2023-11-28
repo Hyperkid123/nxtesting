@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.14](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.13...@mmnxtest/react-core-1.0.14) (2023-11-28)
+
+
+### Bug Fixes
+
+* **react-core:** trigger release ([ee3066d](https://github.com/Hyperkid123/nxtesting/commit/ee3066d458193fd23658d32d40d310f76e27c635))
+* trigger ([214bbcc](https://github.com/Hyperkid123/nxtesting/commit/214bbcc05d0c54ce33edf3e05b7c530cbc0cf4a5))
+
 ## [1.0.13](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.12...@mmnxtest/react-core-1.0.13) (2023-11-28)
 
 ## [1.0.12](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.11...@mmnxtest/react-core-1.0.12) (2023-11-28)
