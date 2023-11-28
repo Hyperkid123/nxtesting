@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.13](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.12...@mmnxtest/react-core-1.0.13) (2023-11-28)
+
 ## [1.0.12](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/react-core-1.0.11...@mmnxtest/react-core-1.0.12) (2023-11-28)
 
 ### Dependency Updates
