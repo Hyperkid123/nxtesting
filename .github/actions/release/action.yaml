@@ -1,5 +1,15 @@
 name: Release job
 description: build affected packages and publish them to npm
+inputs:
+  npm_token:
+    description: 'NPM token'
+    required: true
+  gh_token:
+    description: 'Github token'
+    required: true
+  gh_actor:
+    description: 'Github actor'
+    required: true
 runs:
   using: "composite"
   steps:
@@ -14,20 +24,21 @@ runs:
     - name: git config
       shell: bash
       run: |
-        git config user.name "${GITHUB_ACTOR}"
-        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git config user.name "${{ inputs.gh_actor }}"
+        git config user.email "${{ inputs.gh_actor }}@users.noreply.github.com"
     - name: Build
       shell: bash
       run: npx nx run-many -t build
     - name: Set publish config
       env:
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NPM_TOKEN: ${{ inputs.npm_token }}
       shell: bash
       run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
     - name: Version
+      shell: bash
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ inputs.gh_token }}
+        GITHUB_TOKEN: ${{ inputs.gh_token }}
       run: npx nx affected --base=last-release --parallel=1 --target=version --postTargets=syncDependencies,npm,github --trackDeps
     - name: Tag last-release
       shell: bash
