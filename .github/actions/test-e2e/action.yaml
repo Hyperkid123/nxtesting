@@ -6,6 +6,7 @@ runs:
     - uses: nrwl/nx-set-shas@v3
     - uses: './.github/actions/node-cache'
     - uses: './.github/actions/cypress-cache'
+    - uses: './.github/actions/webpack-cache'
     - name: Install deps
       shell: bash
       run: npm i
