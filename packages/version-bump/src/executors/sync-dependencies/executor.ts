@@ -38,7 +38,7 @@ function commitToPrevious(baseBranch: string, remote: string) {
   const pushCommand = `git push ${remote} ${baseBranch}`;
   // check if there are any changes to be committed
   const isDiff = execSync(diffCommand).toString().length > 0;
-  if(!isDiff) {
+  if(isDiff) {
     execSync(addCommand);
     execSync(commitToPreviousCommand);
     execSync(pushCommand);
