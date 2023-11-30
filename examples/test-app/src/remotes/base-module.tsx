@@ -1,11 +1,9 @@
 const BaseModule = () => {
   return (
     <div>
-      <h2>
-        Remotely loaded module
-      </h2>
+      <h2>Remotely loaded module</h2>
     </div>
-  )
-}
+  );
+};
 
-export default BaseModule
+export default BaseModule;

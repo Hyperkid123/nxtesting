@@ -1,4 +1,4 @@
 export interface SyncDependenciesExecutorSchema {
-    remote?: string;
-    baseBranch?: string;
+  remote?: string;
+  baseBranch?: string;
 }
