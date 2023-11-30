@@ -1,15 +1,38 @@
 import { composePlugins, withNx, NxWebpackExecutionContext } from '@nx/webpack';
 import { withReact } from '@nx/react';
-import { withModuleFederation } from '@nx/react/module-federation';
 import { merge } from 'webpack-merge'
-import { Configuration } from 'webpack';
+import { Configuration, container } from 'webpack';
 import { join } from 'path'
 
-import baseConfig from './module-federation.config';
 
-const config = {
-  ...baseConfig,
-};
+const withModuleFederation = (config: Configuration, { context }: NxWebpackExecutionContext): Configuration => {
+  const AppFederationPlugin = new container.ModuleFederationPlugin({
+    name: 'testApp',
+    filename: 'testApp.js',
+    library: {
+      type: 'var',
+      name: 'testApp'
+    },
+    remotes: [],
+    exposes: {
+      BaseModule: join(context.root, 'examples', 'test-app', 'src', 'remotes', 'base-module.tsx')
+    },
+    shared: [{
+      react: {
+        singleton: true,
+        requiredVersion: '*'
+      },
+      'react-dom': {
+        singleton: true,
+        requiredVersion: '*'
+      }
+    }]
+  })
+  const plugins: Configuration['plugins'] = [AppFederationPlugin]
+  return merge(config, {
+    plugins
+  })
+}
 
 
 const withWebpackCache = (config: Configuration, { context }: NxWebpackExecutionContext): Configuration => {
@@ -25,6 +48,6 @@ const withWebpackCache = (config: Configuration, { context }: NxWebpackExecution
 export default composePlugins(
   withNx(),
   withReact(),
-  withModuleFederation(config),
-  withWebpackCache
+  withWebpackCache,
+  withModuleFederation,
 );

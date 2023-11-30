@@ -49,12 +49,13 @@
       }
     },
     "serve": {
-      "executor": "@nx/react:module-federation-dev-server",
+      "executor": "@nx/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "test-app:build",
         "hmr": true,
-        "port": 4200
+        "port": 4200,
+        "webpackConfig": "examples/test-app/webpack.config.ts"
       },
       "configurations": {
         "development": {
