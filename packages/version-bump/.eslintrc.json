@@ -34,7 +34,8 @@
             "checkObsoleteDependencies": true,
             "checkVersionMismatches": true,
             "ignoredDependencies": [
-              "semver"
+              "semver",
+              "zod"
             ]
           }
         ]

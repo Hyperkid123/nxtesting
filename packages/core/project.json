@@ -5,12 +5,11 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@mmnxtest/version-bump:builder",
       "options": {
         "outputPath": "dist/packages/core",
-        "main": "packages/core/src/index.ts",
-        "tsConfig": "packages/core/tsconfig.lib.json",
+        "esmTsConfig": "packages/core/tsconfig.esm.json",
+        "cjsTsConfig": "packages/core/tsconfig.cjs.json",
         "assets": ["packages/core/*.md"]
       }
     },
@@ -22,10 +21,7 @@
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/core/**/*.ts",
-          "packages/core/package.json"
-        ]
+        "lintFilePatterns": ["packages/core/**/*.ts", "packages/core/package.json"]
       }
     },
     "test": {

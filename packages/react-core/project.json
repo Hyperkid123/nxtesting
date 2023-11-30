@@ -5,27 +5,19 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@mmnxtest/version-bump:builder",
       "options": {
-        "outputPath": "dist/packages/react-core",
-        "main": "packages/react-core/src/index.ts",
-        "tsConfig": "packages/react-core/tsconfig.lib.json",
-        "assets": ["packages/react-core/*.md"]
+        "outputPath": "dist/packages/core",
+        "esmTsConfig": "packages/core/tsconfig.esm.json",
+        "cjsTsConfig": "packages/core/tsconfig.cjs.json",
+        "assets": ["packages/core/*.md"]
       }
-    },
-    "publish": {
-      "command": "node tools/scripts/publish.mjs @mmnxtest/react-core {args.ver} {args.tag}",
-      "dependsOn": ["build"]
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "packages/react-core/**/*.ts",
-          "packages/react-core/package.json"
-        ]
+        "lintFilePatterns": ["packages/react-core/**/*.ts", "packages/react-core/package.json"]
       }
     },
     "test": {
@@ -59,6 +51,6 @@
     "syncDependencies": {
       "executor": "@mmnxtest/version-bump:sync-dependencies"
     },
-  "tags": []
+    "tags": []
   }
 }
