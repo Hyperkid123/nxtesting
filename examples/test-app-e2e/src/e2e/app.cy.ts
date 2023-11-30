@@ -9,5 +9,7 @@ describe('shell-e2e', () => {
 
     // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains(/There will be dragons/);
+
+    cy.contains('Remotely loaded module').should('exist');
   });
 });

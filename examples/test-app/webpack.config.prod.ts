@@ -27,8 +27,4 @@ const prodConfig = {
 };
 
 // Nx plugins for webpack to build config object from Nx options and context.
-export default composePlugins(
-  withNx(),
-  withReact(),
-  withModuleFederation(prodConfig)
-);
+export default composePlugins(withNx(), withReact(), withModuleFederation(prodConfig));
