@@ -32,9 +32,12 @@ type DependencyMetadata = {
 
 
 function commitToPrevious(baseBranch: string, remote: string) {
+  const diffCommand = `git diff HEAD`;
   const addCommand = `git add .`;
   const commitToPreviousCommand = `git commit --no-edit -m "[skip ci] sync dependencies"`;
   const pushCommand = `git push ${remote} ${baseBranch}`;
+  const isDiff = execSync(diffCommand).toString();
+  // console.log({ isDiff })
   execSync(addCommand);
   execSync(commitToPreviousCommand);
   execSync(pushCommand);
