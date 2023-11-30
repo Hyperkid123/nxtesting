@@ -1,6 +1,6 @@
 {
   "name": "@mmnxtest/react-core",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "devDependencies": {
     "tslib": "^2.3.0"
   },
