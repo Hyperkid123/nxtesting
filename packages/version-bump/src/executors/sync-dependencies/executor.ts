@@ -36,11 +36,13 @@ function commitToPrevious(baseBranch: string, remote: string) {
   const addCommand = `git add .`;
   const commitToPreviousCommand = `git commit --no-edit -m "[skip ci] sync dependencies"`;
   const pushCommand = `git push ${remote} ${baseBranch}`;
-  const isDiff = execSync(diffCommand).toString();
-  // console.log({ isDiff })
-  execSync(addCommand);
-  execSync(commitToPreviousCommand);
-  execSync(pushCommand);
+  // check if there are any changes to be committed
+  const isDiff = execSync(diffCommand).toString().length > 0;
+  if(!isDiff) {
+    execSync(addCommand);
+    execSync(commitToPreviousCommand);
+    execSync(pushCommand);
+  }
 }
 
 export default async function syncDependencies(
