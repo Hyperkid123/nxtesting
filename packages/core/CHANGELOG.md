@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.12](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.11...@mmnxtest/core-1.0.12) (2023-11-30)
+
 ## [1.0.11](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.10...@mmnxtest/core-1.0.11) (2023-11-30)
 
 ## [1.0.10](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.9...@mmnxtest/core-1.0.10) (2023-11-30)
