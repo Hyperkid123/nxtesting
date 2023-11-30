@@ -54,6 +54,9 @@
       "options": {
         "access": "public"
       }
+    },
+    "syncDependencies": {
+      "executor": "@mmnxtest/version-bump:sync-dependencies"
     }
   },
   "tags": []
