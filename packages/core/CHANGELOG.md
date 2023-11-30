@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.13](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.12...@mmnxtest/core-1.0.13) (2023-11-30)
+
+
+### Bug Fixes
+
+* **core:** should trigger all ([ca277e7](https://github.com/Hyperkid123/nxtesting/commit/ca277e74bd7996d0fa6e80dfcc2b784ee8576e22))
+
 ## [1.0.12](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.11...@mmnxtest/core-1.0.12) (2023-11-30)
 
 ## [1.0.11](https://github.com/Hyperkid123/nxtesting/compare/@mmnxtest/core-1.0.10...@mmnxtest/core-1.0.11) (2023-11-30)
