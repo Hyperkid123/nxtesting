@@ -1,6 +1,6 @@
 {
   "name": "@mmnxtest/core",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "devDependencies": {
     "tslib": "^2.3.0"
   },
