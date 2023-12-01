@@ -9,7 +9,7 @@
   "module": "./esm/index.js",
   "typings": "./index.d.ts",
   "dependencies": {
-    "@mmnxtest/core": "^1.0.16"
+    "@mmnxtest/core": "^1.0.17"
   },
   "publishConfig": {
     "access": "public"
